@@ -63,9 +63,9 @@ const SignUp = () => {
 
           <Button
             handleClick={() => step < 3 && dispatch(nextStep())}
-            className="w-full"
+            className="w-full mt-4"
           >
-            Continue
+            { step < 3 ? "Continue" : "Create Account"}
           </Button>
 
           <div className="label-text text-center w-full text-gray-600 py-2">
