@@ -17,7 +17,7 @@ export default function Home() {
       </h2>
 
       <div className="flex gap-4 p-4 mt-8">
-        <Button handleClick={() => {}}>Get Started</Button>
+        <Button handleClick={() => router.push('/users/sign-up')}>Get Started</Button>
         <Button handleClick={() => router.push('/users/login')} outline={true}>
           Sign In
         </Button>

@@ -1,22 +1,23 @@
 "use client";
 import Button from "@/components/Button";
 import Image from "next/image";
-import LoginBanner from '@/assets/Trakio_banner.png'
-import { useRouter } from "next/navigation";
+import LoginBanner from "@/assets/Trakio_banner.png";
+import Logo from "@/components/Logo";
+import {useRouter} from 'next/navigation'
 
 const Login = () => {
   const router = useRouter()
 
   return (
-    <div className="flex min-h-screen flex-col items-center p-10">
-      <div className="card flex-row shadow-xl p-4 mt-4 bg-base-100 rounded-2xl">
+    <div className="flex min-h-screen flex-col items-center p-4 md:justify-center">
+      <div className="card flex-row shadow-xl p-4 mt-4 bg-white rounded-2xl bg-opacity-60 backdrop-filter backdrop-blur-lg">
         {/* Left section */}
         <div className="flex-1 max-w-[32rem] p-4 md:p-10">
-          <span className="font-bold text-base text-primary flex cursor-pointer" onClick={() => router.push('/')} >
-            Trak<p className="text-secondary">io</p>
-          </span>
+          <Logo />
 
-          <div className="text-gray-800 text-xl font-semibold mt-12">Welcome back!</div>
+          <div className="text-gray-800 text-xl font-semibold mt-12">
+            Welcome back!
+          </div>
           <p className="text-sm text-gray-500 mt-2 mb-8">
             Effortlessly manage bugs, track progress, and streamline your
             workflow—all in one powerful platform.
@@ -55,19 +56,26 @@ const Login = () => {
             </div>
 
             {/* Forgot password */}
-            <p className="label-text text-primary cursor-pointer">Forgot Password</p>
+            <p className="label-text text-primary cursor-pointer">
+              Forgot Password
+            </p>
           </div>
 
-          <Button handleClick={() => {}} className="w-full">Log In</Button>
+          <Button handleClick={() => {}} className="w-full">
+            Log In
+          </Button>
+          <div className="label-text text-center w-full text-gray-600 py-2">
+            Don&apos;t have an account? <a className="outline-none text-primary cursor-pointer" onClick={() => router.push('/users/sign-up')} >Sign up</a>
+          </div>
         </div>
         {/* Right Section */}
         <div className="hidden md:flex">
-          <Image 
+          <Image
             src={LoginBanner}
             height={600}
             className="rounded-lg"
             alt="login banner"
-           />
+          />
         </div>
       </div>
     </div>

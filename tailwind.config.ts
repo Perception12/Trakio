@@ -27,14 +27,12 @@ const config: Config = {
           'primary': '#7272F0',
           'base-100': '#FFFFFF',
           'secondary': '#dc6ddf',
-          'base-content': '#e0e0e0',
-          'base': '#f0f0f0',
+          'base-content': '#FFFFFF',
+          'primary-content': '#FFFFFF',
+          'base': '#121212',
           'success': '#aee5c8',
           'warning': '#ffcc99',
           'error': '#ff9999',
-          'grad-1': '#EEf3EB',
-          'grad-2': '#D3E3FD',
-          'grad-3': '#FBF2F1'
         },
       }
     ],
