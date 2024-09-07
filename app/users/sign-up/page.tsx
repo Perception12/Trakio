@@ -56,7 +56,8 @@ const SignUp = () => {
               Organization Details
             </li>
           </ul>
-
+          
+          {/* Render different forms based on the step state */}
           {step === 1 && <SignUpFormOne />}
           {step === 2 && <SignupFormTwo />}
           {step === 3 && <SignupFormThree />}
