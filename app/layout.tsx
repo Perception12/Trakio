@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <StoreProvider>
       <html lang="en">
-        <body className={`${roboto.className}`}>{children}</body>
+        <body className={`${roboto.className} box-border`}>{children}</body>
       </html>
     </StoreProvider>
   );
